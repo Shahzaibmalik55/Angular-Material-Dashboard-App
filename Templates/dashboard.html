@@ -1,0 +1,70 @@
+
+
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+
+    <div layout-align="start center" layout="row" style="background-image: url('../background2.jpg');padding-top: 50px" >
+
+            <svg class="user-avatar md-padding" style="border-radius: 50% 50%" viewBox="0 0 128 128" height="90" width="90" pointer-events="none" display="block" > <path fill="#FF8A80" d="M0 0h128v128H0z"/> <path fill="#FFE0B2" d="M36.3 94.8c6.4 7.3 16.2 12.1 27.3 12.4 10.7-.3 20.3-4.7 26.7-11.6l.2.1c-17-13.3-12.9-23.4-8.5-28.6 1.3-1.2 2.8-2.5 4.4-3.9l13.1-11c1.5-1.2 2.6-3 2.9-5.1.6-4.4-2.5-8.4-6.9-9.1-1.5-.2-3 0-4.3.6-.3-1.3-.4-2.7-1.6-3.5-1.4-.9-2.8-1.7-4.2-2.5-7.1-3.9-14.9-6.6-23-7.9-5.4-.9-11-1.2-16.1.7-3.3 1.2-6.1 3.2-8.7 5.6-1.3 1.2-2.5 2.4-3.7 3.7l-1.8 1.9c-.3.3-.5.6-.8.8-.1.1-.2 0-.4.2.1.2.1.5.1.6-1-.3-2.1-.4-3.2-.2-4.4.6-7.5 4.7-6.9 9.1.3 2.1 1.3 3.8 2.8 5.1l11 9.3c1.8 1.5 3.3 3.8 4.6 5.7 1.5 2.3 2.8 4.9 3.5 7.6 1.7 6.8-.8 13.4-5.4 18.4-.5.6-1.1 1-1.4 1.7-.2.6-.4 1.3-.6 2-.4 1.5-.5 3.1-.3 4.6.4 3.1 1.8 6.1 4.1 8.2 3.3 3 8 4 12.4 4.5 5.2.6 10.5.7 15.7.2 4.5-.4 9.1-1.2 13-3.4 5.6-3.1 9.6-8.9 10.5-15.2M76.4 46c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6-.9 0-1.6-.7-1.6-1.6-.1-.9.7-1.6 1.6-1.6zm-25.7 0c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6-.9 0-1.6-.7-1.6-1.6-.1-.9.7-1.6 1.6-1.6z"/> <path fill="#E0F7FA" d="M105.3 106.1c-.9-1.3-1.3-1.9-1.3-1.9l-.2-.3c-.6-.9-1.2-1.7-1.9-2.4-3.2-3.5-7.3-5.4-11.4-5.7 0 0 .1 0 .1.1l-.2-.1c-6.4 6.9-16 11.3-26.7 11.6-11.2-.3-21.1-5.1-27.5-12.6-.1.2-.2.4-.2.5-3.1.9-6 2.7-8.4 5.4l-.2.2s-.5.6-1.5 1.7c-.9 1.1-2.2 2.6-3.7 4.5-3.1 3.9-7.2 9.5-11.7 16.6-.9 1.4-1.7 2.8-2.6 4.3h109.6c-3.4-7.1-6.5-12.8-8.9-16.9-1.5-2.2-2.6-3.8-3.3-5z"/> <circle fill="#444" cx="76.3" cy="47.5" r="2"/> <circle fill="#444" cx="50.7" cy="47.6" r="2"/> <path fill="#444" d="M48.1 27.4c4.5 5.9 15.5 12.1 42.4 8.4-2.2-6.9-6.8-12.6-12.6-16.4C95.1 20.9 92 10 92 10c-1.4 5.5-11.1 4.4-11.1 4.4H62.1c-1.7-.1-3.4 0-5.2.3-12.8 1.8-22.6 11.1-25.7 22.9 10.6-1.9 15.3-7.6 16.9-10.2z"/> </svg>
+    <span style="color: white" class="md-title">Shahzaib Malik</span>
+    </div>
+<div layout-align="start start" layout="column" class="md-padding" style="background-color: rgba(72, 71, 142, 0.89) " flex>
+<md-list>
+    <md-list-item ng-repeat="item in app.settings">
+
+            <md-item-content md-ink-ripple layout="row" layout-align="start center"  style="color: white">
+            <div class="insert">
+    <ng-md-icon icon="{{ item.icon }}" size="25"></ng-md-icon>
+</div>
+            <div class="inset">
+               <a style="text-decoration: none;font-weight: bold;color: white;" ui-sref="{{ item.link }}"> {{ item.title }} </a>
+            </div>
+        </md-item-content>
+    </md-list-item>
+</md-list>
+    </div>
+</md-sidenav>
+<div layout="row" style="background-image: url('../background1.jpg')">
+<div class="relative" layout="column" layout-fill role="main">
+    <div class="md-toolbar-tools" layout-align="start start">
+<md-button layout ng-click="app.toggleSidenav('left')" layout-align="start start"><ng-md-icon icon="menu" size="25" aria-label="Open Menu"></ng-md-icon></md-button>
+    </div>
+
+    <div layout-align="start center" class="md-padding" layout="row" style="padding-bottom: 50px">
+        <svg class="user-avatar md-padding" style="border-radius: 50% 50%" viewBox="0 0 128 128" height="100" width="100" pointer-events="none" display="block" > <path fill="#FF8A80" d="M0 0h128v128H0z"/> <path fill="#FFE0B2" d="M36.3 94.8c6.4 7.3 16.2 12.1 27.3 12.4 10.7-.3 20.3-4.7 26.7-11.6l.2.1c-17-13.3-12.9-23.4-8.5-28.6 1.3-1.2 2.8-2.5 4.4-3.9l13.1-11c1.5-1.2 2.6-3 2.9-5.1.6-4.4-2.5-8.4-6.9-9.1-1.5-.2-3 0-4.3.6-.3-1.3-.4-2.7-1.6-3.5-1.4-.9-2.8-1.7-4.2-2.5-7.1-3.9-14.9-6.6-23-7.9-5.4-.9-11-1.2-16.1.7-3.3 1.2-6.1 3.2-8.7 5.6-1.3 1.2-2.5 2.4-3.7 3.7l-1.8 1.9c-.3.3-.5.6-.8.8-.1.1-.2 0-.4.2.1.2.1.5.1.6-1-.3-2.1-.4-3.2-.2-4.4.6-7.5 4.7-6.9 9.1.3 2.1 1.3 3.8 2.8 5.1l11 9.3c1.8 1.5 3.3 3.8 4.6 5.7 1.5 2.3 2.8 4.9 3.5 7.6 1.7 6.8-.8 13.4-5.4 18.4-.5.6-1.1 1-1.4 1.7-.2.6-.4 1.3-.6 2-.4 1.5-.5 3.1-.3 4.6.4 3.1 1.8 6.1 4.1 8.2 3.3 3 8 4 12.4 4.5 5.2.6 10.5.7 15.7.2 4.5-.4 9.1-1.2 13-3.4 5.6-3.1 9.6-8.9 10.5-15.2M76.4 46c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6-.9 0-1.6-.7-1.6-1.6-.1-.9.7-1.6 1.6-1.6zm-25.7 0c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6-.9 0-1.6-.7-1.6-1.6-.1-.9.7-1.6 1.6-1.6z"/> <path fill="#E0F7FA" d="M105.3 106.1c-.9-1.3-1.3-1.9-1.3-1.9l-.2-.3c-.6-.9-1.2-1.7-1.9-2.4-3.2-3.5-7.3-5.4-11.4-5.7 0 0 .1 0 .1.1l-.2-.1c-6.4 6.9-16 11.3-26.7 11.6-11.2-.3-21.1-5.1-27.5-12.6-.1.2-.2.4-.2.5-3.1.9-6 2.7-8.4 5.4l-.2.2s-.5.6-1.5 1.7c-.9 1.1-2.2 2.6-3.7 4.5-3.1 3.9-7.2 9.5-11.7 16.6-.9 1.4-1.7 2.8-2.6 4.3h109.6c-3.4-7.1-6.5-12.8-8.9-16.9-1.5-2.2-2.6-3.8-3.3-5z"/> <circle fill="#444" cx="76.3" cy="47.5" r="2"/> <circle fill="#444" cx="50.7" cy="47.6" r="2"/> <path fill="#444" d="M48.1 27.4c4.5 5.9 15.5 12.1 42.4 8.4-2.2-6.9-6.8-12.6-12.6-16.4C95.1 20.9 92 10 92 10c-1.4 5.5-11.1 4.4-11.1 4.4H62.1c-1.7-.1-3.4 0-5.2.3-12.8 1.8-22.6 11.1-25.7 22.9 10.6-1.9 15.3-7.6 16.9-10.2z"/> </svg>
+        <div layout="column" class="md-padding">
+        <span style="color: white" class="md-title">Shahzaib Malik</span>
+        <span class="md-subheader-content" style="color: deepskyblue;">UI/UX Design</span>
+        </div>
+    </div>
+    <md-button class="md-fab fab_button" ng-click="app.showDialog($event);"><ng-md-icon icon="add" size="23" aria-label="Add Todo"></ng-md-icon></md-button>
+<div layout layout-align="row" >
+    <span style="background-color: #448aff;color: white" class="md-padding text md-headline" flex="50"><span style="font-size: 40px;"> {{ app.getTotalTodos() }}</span> <br> Remaining Tasks</span>
+    <span style="background-color: deeppink;color:white" class="md-padding text md-headline" flex="50"><span style="font-size: 40px"> 10 </span> <br> Completed Tasks</span>
+
+</div>
+</div>
+</div>
+
+<md-list  class="md-padding">
+    <md-list-item ng-repeat="item in app.tasks track by $index">
+        <img ng-if="$first" src="Capture.PNG" height="90" width="30" >
+        <img ng-if="$last && !$first" src="Capture2.PNG"  height="90" width="30">
+        <img ng-if="$even && !$first && !$last" src="Capture3.PNG"  height="90" width="30">
+        <img  ng-if="$odd && !$first && !$last" src="Capture4.PNG"  height="90" width="30">
+        <div class="md-list-item-text md-headline" style="text-transform: capitalize;margin-bottom: 60px;padding-left: 15px" >
+        {{ item.task }}
+        </div>
+        <md-menu style="margin-top: -60px;width: 100%;" >
+            <md-button style="float: right" ng-click="$mdOpenMenu($event)"><ng-md-icon icon="keyboard_arrow_down" size="30"></ng-md-icon></md-button>
+            <md-menu-content width="4">
+                <md-menu-item>
+                <md-button ng-show="item.done" ng-click="app.complete(item)">Uncompleted</md-button>
+                <md-button ng-hide="item.done" ng-click="app.incomplete(item)">Completed</md-button>
+                </md-menu-item>
+                <md-menu-item>
+                <md-button ng-click="app.delete($index)">Delete</md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </md-list-item>
+</md-list>

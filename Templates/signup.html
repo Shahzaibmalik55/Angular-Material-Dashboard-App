@@ -1,0 +1,41 @@
+<div>
+
+    <md-toolbar layout="row" style="padding-left: 10px;">
+        <p class="md-headline">Material Todo App</p>
+
+        <span flex></span>
+        <div style="text-align: center;padding-top: 20px">
+            <md-button ui-sref="login" style="font-weight: bold;font-size: 17px" class="md-padding">Sign in</md-button>
+            <md-button ui-sref="Signup" style="font-weight: bold;font-size: 17px" class="md-padding md-raised">Sign up</md-button>
+        </div>
+    </md-toolbar>
+<div class="md-padding" style="text-align: center">
+    <h1 style="font-family: serif">Sign Up</h1>
+    <form name="signup" ng-submit="app.createuser(app.email,app.pass,app.firstname,app.lastname)" layout-align="center center" layout="column">
+        <h3 id="error" style="color: red"></h3>
+    <md-input-container>
+        <label>First Name</label>
+        <input name="firstname" type="text" ng-model="app.firstname" required>
+        <div></div>
+    </md-input-container>
+    <md-input-container>
+        <label>Last Name</label>
+        <input type="text" name="lastname" ng-model="app.lastname" required>
+    </md-input-container>
+    <md-input-container>
+        <label>Email</label>
+        <input type="email" name="email" ng-model="app.email" required>
+        <span style="color: red" ng-show="signup.$untouched">Email is required</span>
+    </md-input-container>
+    <md-input-container>
+        <label>Password</label>
+        <input type="password" name="pass" ng-model="app.pass" required>
+        <span style="color: red" ng-show="signup.$untouched">Password is required</span>
+    </md-input-container>
+    <button type="submit" ng-disabled="signup.$invalid" class="md-button md-raised md-primary">
+        Sign Up</button>
+        <span ng-show="app.loader"><md-progress-circular md-mode="indeterminate" class="md-hue-3"></md-progress-circular></span>
+</form>
+
+</div>
+</div>
